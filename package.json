@@ -1,0 +1,34 @@
+{
+    "name": "week14_homework",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js",
+        "seed": "node seeds/seed.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brijeeta/Week14_Homework.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/brijeeta/Week14_Homework/issues"
+    },
+    "homepage": "https://github.com/brijeeta/Week14_Homework#readme",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "connect-session-sequelize": "^7.1.2",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-handlebars": "^6.0.1",
+        "express-session": "^1.17.2",
+        "mysql": "^2.18.1",
+        "mysql2": "^2.3.3",
+        "nodemon": "^2.0.15",
+        "sequelize": "^6.9.0"
+    }
+}
