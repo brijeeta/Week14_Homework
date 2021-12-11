@@ -1,0 +1,16 @@
+[{
+        "title": "Why mvc is so important",
+        "contents": "MVC is important to understand because it is the basic structure which most web applications are built on. The same is also true for mobile apps and desktop programs. ... MVC achieves this though letting a user interact with a User Interface. This allows for manipulation and control over the system.",
+        "comments": "Very informative!"
+    },
+    {
+        "title": "Authentication vs Authorization",
+        "contents": "Authentication confirms that users are who they say they are. Authorization gives those users permission to access a resource.",
+        "comments": "This is the answer I was looking for!"
+    },
+    {
+        "title": "Object-Relational Mapping",
+        "contents": "Object–relational mapping (ORM, O/RM, and O/R mapping tool) in computer science is a programming technique for converting data between incompatible type systems using object-oriented programming languages.",
+        "comments": "Thanks for the explanation!"
+    }
+]
