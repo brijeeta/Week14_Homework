@@ -1,29 +1,19 @@
-<div class="field columns p-2 is-centered ">
-    <h2 class="block subtitle">Create New Post</h2>
-    <form class="is-half mx-6  my-3 p-3 has-background-light column is-centered create-blog-form">
+{{> postinfo post }}
 
-        <div class="text-center">
-            <h2>{{title}}</h2>
-            <p>{{contents}}</p>
-            <p>Created by {{user.username}} on {{format_date date_created}}</p>
-            <p>
-                <span for="img" aria-label="review">✍</span>
-            <p>{{comments}}</p>
-            </p>
-            <p>
-                {{!-- <button class="button is-primary my-3">Edit</button> --}}
-            <div class="block delete-button">
-                <button id="delete-button" data-id="{{post.id}}" type="submit"
-                    class="button is-primary my-3">Delete</button>
+{{#if loggedIn}}
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
 
-            </div>
-            <div class="block update-button">
-                <button id="update-button" data-id="{{post.id}}" type="submit" class="button is-primary my-3">Update
-                    Post</button>
+    <div>
+        <button type="submit">add comment</button>
+    </div>
+</form>
+{{/if}}
 
-            </div>
-            </p>
-        </div>
+{{> comments post.comments}}
 
-    </form>
-</div>
+{{#if loggedIn}}
+<script src="/js/addcomment.js"></script>
+{{/if}}

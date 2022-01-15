@@ -1,24 +1,8 @@
-
 <!-- Loop over each object in the posts array -->
-{{#if posts.length}}
-<div class="columns is-three-quarters p-6 post-list">
-  <div class="column is-three-quarters">
-    {{#each posts as |post| }}
-    <div class="box mb-4 post-details">
-      <div class="block">
-        <h2 class="title is-5 has-text-left">
-          <a href="/posts/{{post.id}}">{{post.title}}</a>
-        </h2>
-      </div>
-      <div class="block">
-        <p>
-          {{post.contents}}
-        </p>
-        
-      </div>
-    </div>
-    {{/each}}
-  </div>
-</div>
-{{/if}}
-{{!-- <script src="./js/home.js"></script> --}}
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> postinfo post }}
+  </li>
+  {{/each}}
+</ol>

@@ -6,49 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Reviews</title>
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  {{!--
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> --}}
 </head>
 
 <body>
-  <nav class="is-mobile block navbar has-background-link-light" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand is-flex flex-wrap">
-      <h1 class="is-flex is-flex-wrap-wrap navbar-item title">The Tech Blog</h1>
-      <a class="navbar-burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-end has-background-link-light">
-        <a href="/allPosts" class="navbar-item">
-          Home
-        </a>
-        <a href="/dashboard" class="navbar-item">
-          Dashboard
-        </a>
-             {{#if logged_in}}
-      <a href="/" class="navbar-item" id="logout">
-          Logout
-        </a>
+  <div class="wrapper">
+    <header>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/">Home</a>
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
         {{else}}
-       <a href="/login" class="navbar-item">
-          Login
-        </a>
+        <a href="/login">login</a>
+        <a href="/signup">signup</a>
         {{/if}}
-      </div>
-    </div>
-  </nav>
-  <main>
-    <!-- Render the sub layout -->
-    {{{ body }}}
-  </main>
+      </nav>
+      <h1>
+        <a href="/">The Tech Blog</a>
+      </h1>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
   </div>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  {{#if loggedIn}}
+  <script src="/js/logout.js">
+  </script>
   {{/if}}
 </body>
 

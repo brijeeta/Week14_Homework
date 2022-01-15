@@ -1,4 +1,4 @@
-const logout = async() => {
+const logout = async () => {
     const response = await fetch('/api/users/logout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -13,9 +13,9 @@ const logout = async() => {
 
 document.querySelector('#logout').addEventListener('click', logout);
 
-const burgerIcon = document.querySelector('#burger');
-const navbarMenu = document.querySelector('#navbarBasicExample');
+// const burgerIcon = document.querySelector('#burger');
+// const navbarMenu = document.querySelector('#navbarBasicExample');
 
-burgerIcon.addEventListener('click', () => {
-    navbarMenu.classList.toggle('is-active');
-})
+// burgerIcon.addEventListener('click', () => {
+//     navbarMenu.classList.toggle('is-active');
+// })
